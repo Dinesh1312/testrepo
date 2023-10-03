@@ -7,7 +7,17 @@
       <class name="agentLogin.Campaign"/>
       <class name="agentLogin.Connections"/>
       <class name="agentLogin.Dart"/>
- 	  <class name="agentLogin.Widgets"/>	      
+ 	  <class name="agentLogin.Widgets"/>	
+
+
+
+
+ <class name="agentLogin.Happy New year"/>
+
+
+
+
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
