@@ -1,0 +1,1355 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>123/5/7</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Sep 27 08:14:28 UTC 2023</td>
+</tr>
+<tr><td>Total time:</td><td>2283 seconds (2283365 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='agentLogin.ProfilePage.tc01_verifyProfileLandingPage()'><b>tc01_verifyProfileLandingPage</b><br>Test class: agentLogin.ProfilePage</td>
+<td><div><pre>java.lang.AssertionError: Rating is equal to zero expected [true] but found [false]
+	at driversAndLibrary.WebDriverImpl.verifyLandingPageForUserProfilePage(WebDriverImpl.java:934)
+	at agentLogin.ProfilePage.tc01_verifyProfileLandingPage(ProfilePage.java:40)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1311737500", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1311737500'><pre>java.lang.AssertionError: Rating is equal to zero expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at driversAndLibrary.WebDriverImpl.verifyLandingPageForUserProfilePage(WebDriverImpl.java:934)
+	at agentLogin.ProfilePage.tc01_verifyProfileLandingPage(ProfilePage.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>16</td>
+<td>agentLogin.ProfilePage@1d1f7216</td></tr>
+<tr>
+<td title='agentLogin.ReviewsManagement.tc01_verifyReviewsLandingPage()'><b>tc01_verifyReviewsLandingPage</b><br>Test class: agentLogin.ReviewsManagement</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at agentLogin.ReviewsManagement.tc01_verifyReviewsLandingPage(ReviewsManagement.java:43)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1753841560", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1753841560'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at agentLogin.ReviewsManagement.tc01_verifyReviewsLandingPage(ReviewsManagement.java:43)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>agentLogin.ReviewsManagement@410ae9a3</td></tr>
+<tr>
+<td title='accountManager.Campaign.tc03_verifyManualSurveyFields()'><b>tc03_verifyManualSurveyFields</b><br>Test class: accountManager.Campaign</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#undefined_closeButton&quot;}
+  (Session info: MicrosoftEdge=117.0.2045.31)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows Server 2022&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [af48abf135cc4ffc98d28387877e26eb, findElement {using=id, value=undefined_closeButton}]
+Capabilities {acceptInsecureCerts: true, browserName: msedge, browserVersion: 117.0.2045.31, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:61095}, msedge: {msedgedriverVersion: 117.0.2045.43 (fe8879882c1b..., userDataDir: C:\Users\V2-PER~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61095/devtoo..., se:cdpVersion: 117.0.2045.31, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: af48abf135cc4ffc98d28387877e26eb
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at accountManager.Campaign.tc03_verifyManualSurveyFields(Campaign.java:105)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace474356624", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace474356624'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#undefined_closeButton&quot;}
+  (Session info: MicrosoftEdge=117.0.2045.31)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows Server 2022&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [af48abf135cc4ffc98d28387877e26eb, findElement {using=id, value=undefined_closeButton}]
+Capabilities {acceptInsecureCerts: true, browserName: msedge, browserVersion: 117.0.2045.31, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:61095}, msedge: {msedgedriverVersion: 117.0.2045.43 (fe8879882c1b..., userDataDir: C:\Users\V2-PER~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61095/devtoo..., se:cdpVersion: 117.0.2045.31, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: af48abf135cc4ffc98d28387877e26eb
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at accountManager.Campaign.tc03_verifyManualSurveyFields(Campaign.java:105)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>43</td>
+<td>accountManager.Campaign@4648ce9</td></tr>
+<tr>
+<td title='agentLogin.ProfilePage.tc03_verifyProfessionalSidePage()'><b>tc03_verifyProfessionalSidePage</b><br>Test class: agentLogin.ProfilePage</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at driversAndLibrary.WebDriverImpl.verifyProfessionalsTab(WebDriverImpl.java:1006)
+	at agentLogin.ProfilePage.tc03_verifyProfessionalSidePage(ProfilePage.java:52)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1017098131", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1017098131'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at driversAndLibrary.WebDriverImpl.verifyProfessionalsTab(WebDriverImpl.java:1006)
+	at agentLogin.ProfilePage.tc03_verifyProfessionalSidePage(ProfilePage.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>8</td>
+<td>agentLogin.ProfilePage@1d1f7216</td></tr>
+<tr>
+<td title='agentLogin.ProfilePage.tc08_verifyRatingTab()'><b>tc08_verifyRatingTab</b><br>Test class: agentLogin.ProfilePage</td>
+<td><div><pre>java.lang.AssertionError: Review Count is less than zero expected [true] but found [false]
+	at driversAndLibrary.WebDriverImpl.verifyRatingTab(WebDriverImpl.java:1107)
+	at agentLogin.ProfilePage.tc08_verifyRatingTab(ProfilePage.java:80)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace938225478", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace938225478'><pre>java.lang.AssertionError: Review Count is less than zero expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at driversAndLibrary.WebDriverImpl.verifyRatingTab(WebDriverImpl.java:1107)
+	at agentLogin.ProfilePage.tc08_verifyRatingTab(ProfilePage.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>agentLogin.ProfilePage@1d1f7216</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='accountManager.AccountDashBoard.tc001_accountDashboardLandingPage()'><b>tc001_accountDashboardLandingPage</b><br>Test class: accountManager.AccountDashBoard</td>
+<td></td>
+<td>6</td>
+<td>accountManager.AccountDashBoard@545de5a4</td></tr>
+<tr>
+<td title='accountManager.AdvancedAnalytics.tc001_advancedAnalyticsLandingPage()'><b>tc001_advancedAnalyticsLandingPage</b><br>Test class: accountManager.AdvancedAnalytics</td>
+<td></td>
+<td>8</td>
+<td>accountManager.AdvancedAnalytics@ab7a938</td></tr>
+<tr>
+<td title='accountManager.ReviewsManagement.tc001_reviewsManagementLandingPage()'><b>tc001_reviewsManagementLandingPage</b><br>Test class: accountManager.ReviewsManagement</td>
+<td></td>
+<td>23</td>
+<td>accountManager.ReviewsManagement@274872f8</td></tr>
+<tr>
+<td title='accountManager.IngestionSetup.tc001_verifyingSettingsLandingPage()'><b>tc001_verifyingSettingsLandingPage</b><br>Test class: accountManager.IngestionSetup</td>
+<td></td>
+<td>6</td>
+<td>accountManager.IngestionSetup@569bf9eb</td></tr>
+<tr>
+<td title='accountManager.AdvancedAnalytics.tc002_advancedAnalyticsAccountStatisticsLandingPage()'><b>tc002_advancedAnalyticsAccountStatisticsLandingPage</b><br>Test class: accountManager.AdvancedAnalytics</td>
+<td></td>
+<td>14</td>
+<td>accountManager.AdvancedAnalytics@ab7a938</td></tr>
+<tr>
+<td title='accountManager.ReviewsManagement.tc002_dataAndAnalysisLandingPage()'><b>tc002_dataAndAnalysisLandingPage</b><br>Test class: accountManager.ReviewsManagement</td>
+<td></td>
+<td>13</td>
+<td>accountManager.ReviewsManagement@274872f8</td></tr>
+<tr>
+<td title='accountManager.AccountDashBoard.tc002_leaderboardLandingPage()'><b>tc002_leaderboardLandingPage</b><br>Test class: accountManager.AccountDashBoard</td>
+<td></td>
+<td>4</td>
+<td>accountManager.AccountDashBoard@545de5a4</td></tr>
+<tr>
+<td title='accountManager.IngestionSetup.tc002_verifyingIngestionSettingLandingPage()'><b>tc002_verifyingIngestionSettingLandingPage</b><br>Test class: accountManager.IngestionSetup</td>
+<td></td>
+<td>4</td>
+<td>accountManager.IngestionSetup@569bf9eb</td></tr>
+<tr>
+<td title='accountManager.AdvancedAnalytics.tc003_advancedAnalyticsTierStatisticsLandingPage()'><b>tc003_advancedAnalyticsTierStatisticsLandingPage</b><br>Test class: accountManager.AdvancedAnalytics</td>
+<td></td>
+<td>11</td>
+<td>accountManager.AdvancedAnalytics@ab7a938</td></tr>
+<tr>
+<td title='accountManager.AccountDashBoard.tc003_reportsLandingPage()'><b>tc003_reportsLandingPage</b><br>Test class: accountManager.AccountDashBoard</td>
+<td></td>
+<td>24</td>
+<td>accountManager.AccountDashBoard@545de5a4</td></tr>
+<tr>
+<td title='accountManager.ReviewsManagement.tc003_verifyReviewsManagementShareSocialSites()'><b>tc003_verifyReviewsManagementShareSocialSites</b><br>Test class: accountManager.ReviewsManagement</td>
+<td></td>
+<td>24</td>
+<td>accountManager.ReviewsManagement@274872f8</td></tr>
+<tr>
+<td title='accountManager.IngestionSetup.tc003_verifyingAllIngestionSource()'><b>tc003_verifyingAllIngestionSource</b><br>Test class: accountManager.IngestionSetup</td>
+<td></td>
+<td>483</td>
+<td>accountManager.IngestionSetup@569bf9eb</td></tr>
+<tr>
+<td title='accountManager.IngestionSetup.tc004_VerifyingActivityFeed()'><b>tc004_VerifyingActivityFeed</b><br>Test class: accountManager.IngestionSetup</td>
+<td></td>
+<td>7</td>
+<td>accountManager.IngestionSetup@569bf9eb</td></tr>
+<tr>
+<td title='accountManager.AdvancedAnalytics.tc004_advancedAnalyticsTierStatisticsLandingPage()'><b>tc004_advancedAnalyticsTierStatisticsLandingPage</b><br>Test class: accountManager.AdvancedAnalytics</td>
+<td></td>
+<td>11</td>
+<td>accountManager.AdvancedAnalytics@ab7a938</td></tr>
+<tr>
+<td title='agentLogin.Dart.tc01_DashboardLandingPage()'><b>tc01_DashboardLandingPage</b><br>Test class: agentLogin.Dart</td>
+<td></td>
+<td>21</td>
+<td>agentLogin.Dart@d5ae57e</td></tr>
+<tr>
+<td title='accountManager.Hierarchy.tc01_hierarchyLandingPage()'><b>tc01_hierarchyLandingPage</b><br>Test class: accountManager.Hierarchy</td>
+<td></td>
+<td>12</td>
+<td>accountManager.Hierarchy@3faf2e7d</td></tr>
+<tr>
+<td title='agentLogin.Connections.tc01_landingConnectionPage()'><b>tc01_landingConnectionPage</b><br>Test class: agentLogin.Connections</td>
+<td></td>
+<td>2</td>
+<td>agentLogin.Connections@305f031</td></tr>
+<tr>
+<td title='accountManager.Listings.tc01_listingsLandingPage()'><b>tc01_listingsLandingPage</b><br>Test class: accountManager.Listings</td>
+<td></td>
+<td>8</td>
+<td>accountManager.Listings@61526469</td></tr>
+<tr>
+<td title='accountManager.AccountHomePage.tc01_navigateToAccountsPage()'><b>tc01_navigateToAccountsPage</b><br>Test class: accountManager.AccountHomePage</td>
+<td></td>
+<td>0</td>
+<td>accountManager.AccountHomePage@29ef6856</td></tr>
+<tr>
+<td title='accountManager.Settings.tc01_settingsLandingPage()'><b>tc01_settingsLandingPage</b><br>Test class: accountManager.Settings</td>
+<td></td>
+<td>19</td>
+<td>accountManager.Settings@76ba13c</td></tr>
+<tr>
+<td title='accountManager.Swiss.tc01_swissLandingPageLinks()'><b>tc01_swissLandingPageLinks</b><br>Test class: accountManager.Swiss</td>
+<td></td>
+<td>1</td>
+<td>accountManager.Swiss@7c351808</td></tr>
+<tr>
+<td title='accountManager.Campaign.tc01_verifyAccountManagerLandingPage()'><b>tc01_verifyAccountManagerLandingPage</b><br>Test class: accountManager.Campaign</td>
+<td></td>
+<td>2</td>
+<td>accountManager.Campaign@4648ce9</td></tr>
+<tr>
+<td title='agentLogin.Campaign.tc01_verifyAgentLandingPage()'><b>tc01_verifyAgentLandingPage</b><br>Test class: agentLogin.Campaign</td>
+<td></td>
+<td>8</td>
+<td>agentLogin.Campaign@7e242b4d</td></tr>
+<tr>
+<td title='agentLogin.Listings.tc01_verifyListingsLandingPage()'><b>tc01_verifyListingsLandingPage</b><br>Test class: agentLogin.Listings</td>
+<td></td>
+<td>11</td>
+<td>agentLogin.Listings@592e843a</td></tr>
+<tr>
+<td title='agentLogin.Settings.tc01_verifySettings()'><b>tc01_verifySettings</b><br>Test class: agentLogin.Settings</td>
+<td></td>
+<td>15</td>
+<td>agentLogin.Settings@319988b0</td></tr>
+<tr>
+<td title='accountManager.TierprofilePage.tc01_verifyTierProfileLandingPage()'><b>tc01_verifyTierProfileLandingPage</b><br>Test class: accountManager.TierprofilePage</td>
+<td></td>
+<td>22</td>
+<td>accountManager.TierprofilePage@180e6ac4</td></tr>
+<tr>
+<td title='accountManager.UserProfilePage.tc01_verifyUserProfileLandingPage()'><b>tc01_verifyUserProfileLandingPage</b><br>Test class: accountManager.UserProfilePage</td>
+<td></td>
+<td>22</td>
+<td>accountManager.UserProfilePage@32f0fba8</td></tr>
+<tr>
+<td title='accountManager.Widgets.tc01_widgets()'><b>tc01_widgets</b><br>Test class: accountManager.Widgets</td>
+<td></td>
+<td>86</td>
+<td>accountManager.Widgets@2a39fe6a</td></tr>
+<tr>
+<td title='agentLogin.Widgets.tc01_widgets()'><b>tc01_widgets</b><br>Test class: agentLogin.Widgets</td>
+<td></td>
+<td>8</td>
+<td>agentLogin.Widgets@68759011</td></tr>
+<tr>
+<td title='agentLogin.Widgets.tc02_basicReviews()'><b>tc02_basicReviews</b><br>Test class: agentLogin.Widgets</td>
+<td></td>
+<td>9</td>
+<td>agentLogin.Widgets@68759011</td></tr>
+<tr>
+<td title='agentLogin.Listings.tc02_clickFilter()'><b>tc02_clickFilter</b><br>Test class: agentLogin.Listings</td>
+<td></td>
+<td>3</td>
+<td>agentLogin.Listings@592e843a</td></tr>
+<tr>
+<td title='agentLogin.Connections.tc02_googleMyBusinessConnectionDrawerValidation()'><b>tc02_googleMyBusinessConnectionDrawerValidation</b><br>Test class: agentLogin.Connections</td>
+<td></td>
+<td>5</td>
+<td>agentLogin.Connections@305f031</td></tr>
+<tr>
+<td title='accountManager.Hierarchy.tc02_hierarchyUserLandingPage()'><b>tc02_hierarchyUserLandingPage</b><br>Test class: accountManager.Hierarchy</td>
+<td></td>
+<td>10</td>
+<td>accountManager.Hierarchy@3faf2e7d</td></tr>
+<tr>
+<td title='agentLogin.Dart.tc02_leaderboardLandingPage()'><b>tc02_leaderboardLandingPage</b><br>Test class: agentLogin.Dart</td>
+<td></td>
+<td>5</td>
+<td>agentLogin.Dart@d5ae57e</td></tr>
+<tr>
+<td title='accountManager.Listings.tc02_reportsActivityFeedLandingPage()'><b>tc02_reportsActivityFeedLandingPage</b><br>Test class: accountManager.Listings</td>
+<td></td>
+<td>6</td>
+<td>accountManager.Listings@61526469</td></tr>
+<tr>
+<td title='accountManager.AccountHomePage.tc02_reportsLandingPage()'><b>tc02_reportsLandingPage</b><br>Test class: accountManager.AccountHomePage</td>
+<td></td>
+<td>20</td>
+<td>accountManager.AccountHomePage@29ef6856</td></tr>
+<tr>
+<td title='accountManager.Campaign.tc02_verifyActivityFeedDrawer()'><b>tc02_verifyActivityFeedDrawer</b><br>Test class: accountManager.Campaign</td>
+<td></td>
+<td>2</td>
+<td>accountManager.Campaign@4648ce9</td></tr>
+<tr>
+<td title='agentLogin.Campaign.tc02_verifyActivityFeedDrawer()'><b>tc02_verifyActivityFeedDrawer</b><br>Test class: agentLogin.Campaign</td>
+<td></td>
+<td>2</td>
+<td>agentLogin.Campaign@7e242b4d</td></tr>
+<tr>
+<td title='agentLogin.ReviewsManagement.tc02_verifyFilterCards()'><b>tc02_verifyFilterCards</b><br>Test class: agentLogin.ReviewsManagement</td>
+<td></td>
+<td>1</td>
+<td>agentLogin.ReviewsManagement@410ae9a3</td></tr>
+<tr>
+<td title='accountManager.Swiss.tc02_verifyLandingPage()'><b>tc02_verifyLandingPage</b><br>Test class: accountManager.Swiss</td>
+<td></td>
+<td>0</td>
+<td>accountManager.Swiss@7c351808</td></tr>
+<tr>
+<td title='accountManager.UserProfilePage.tc02_verifyReviewsTab()'><b>tc02_verifyReviewsTab</b><br>Test class: accountManager.UserProfilePage</td>
+<td></td>
+<td>1</td>
+<td>accountManager.UserProfilePage@32f0fba8</td></tr>
+<tr>
+<td title='accountManager.TierprofilePage.tc02_verifyReviewsTab()'><b>tc02_verifyReviewsTab</b><br>Test class: accountManager.TierprofilePage</td>
+<td></td>
+<td>1</td>
+<td>accountManager.TierprofilePage@180e6ac4</td></tr>
+<tr>
+<td title='agentLogin.ProfilePage.tc02_verifyReviewsTab()'><b>tc02_verifyReviewsTab</b><br>Test class: agentLogin.ProfilePage</td>
+<td></td>
+<td>1</td>
+<td>agentLogin.ProfilePage@1d1f7216</td></tr>
+<tr>
+<td title='agentLogin.Widgets.tc03_customizeReviews()'><b>tc03_customizeReviews</b><br>Test class: agentLogin.Widgets</td>
+<td></td>
+<td>6</td>
+<td>agentLogin.Widgets@68759011</td></tr>
+<tr>
+<td title='agentLogin.Connections.tc03_facebookConnectionDrawerValidation()'><b>tc03_facebookConnectionDrawerValidation</b><br>Test class: agentLogin.Connections</td>
+<td></td>
+<td>4</td>
+<td>agentLogin.Connections@305f031</td></tr>
+<tr>
+<td title='accountManager.Hierarchy.tc03_hierarchyUserDrawerLandingPage()'><b>tc03_hierarchyUserDrawerLandingPage</b><br>Test class: accountManager.Hierarchy</td>
+<td></td>
+<td>85</td>
+<td>accountManager.Hierarchy@3faf2e7d</td></tr>
+<tr>
+<td title='accountManager.Listings.tc03_listingsLocationDataIssue()'><b>tc03_listingsLocationDataIssue</b><br>Test class: accountManager.Listings</td>
+<td></td>
+<td>6</td>
+<td>accountManager.Listings@61526469</td></tr>
+<tr>
+<td title='accountManager.AccountHomePage.tc03_reportsActivityFeedLandingPage()'><b>tc03_reportsActivityFeedLandingPage</b><br>Test class: accountManager.AccountHomePage</td>
+<td></td>
+<td>3</td>
+<td>accountManager.AccountHomePage@29ef6856</td></tr>
+<tr>
+<td title='agentLogin.ReviewsManagement.tc03_verifyFlagReview()'><b>tc03_verifyFlagReview</b><br>Test class: agentLogin.ReviewsManagement</td>
+<td></td>
+<td>0</td>
+<td>agentLogin.ReviewsManagement@410ae9a3</td></tr>
+<tr>
+<td title='agentLogin.Campaign.tc03_verifyManualSurveyFields()'><b>tc03_verifyManualSurveyFields</b><br>Test class: agentLogin.Campaign</td>
+<td></td>
+<td>10</td>
+<td>agentLogin.Campaign@7e242b4d</td></tr>
+<tr>
+<td title='accountManager.UserProfilePage.tc03_verifyProfessionalSidePage()'><b>tc03_verifyProfessionalSidePage</b><br>Test class: accountManager.UserProfilePage</td>
+<td></td>
+<td>35</td>
+<td>accountManager.UserProfilePage@32f0fba8</td></tr>
+<tr>
+<td title='accountManager.TierprofilePage.tc03_verifyProfessionalSidePage()'><b>tc03_verifyProfessionalSidePage</b><br>Test class: accountManager.TierprofilePage</td>
+<td></td>
+<td>36</td>
+<td>accountManager.TierprofilePage@180e6ac4</td></tr>
+<tr>
+<td title='agentLogin.Dart.tc03_verifyProfilePageShareSocialSites()'><b>tc03_verifyProfilePageShareSocialSites</b><br>Test class: agentLogin.Dart</td>
+<td></td>
+<td>31</td>
+<td>agentLogin.Dart@d5ae57e</td></tr>
+<tr>
+<td title='accountManager.Swiss.tc03_verifySwissPageFooterIndustries()'><b>tc03_verifySwissPageFooterIndustries</b><br>Test class: accountManager.Swiss</td>
+<td></td>
+<td>0</td>
+<td>accountManager.Swiss@7c351808</td></tr>
+<tr>
+<td title='accountManager.UserProfilePage.tc04_clickShareProfileIcon()'><b>tc04_clickShareProfileIcon</b><br>Test class: accountManager.UserProfilePage</td>
+<td></td>
+<td>0</td>
+<td>accountManager.UserProfilePage@32f0fba8</td></tr>
+<tr>
+<td title='accountManager.TierprofilePage.tc04_clickShareProfileIcon()'><b>tc04_clickShareProfileIcon</b><br>Test class: accountManager.TierprofilePage</td>
+<td></td>
+<td>0</td>
+<td>accountManager.TierprofilePage@180e6ac4</td></tr>
+<tr>
+<td title='agentLogin.ProfilePage.tc04_clickShareProfileIcon()'><b>tc04_clickShareProfileIcon</b><br>Test class: agentLogin.ProfilePage</td>
+<td></td>
+<td>0</td>
+<td>agentLogin.ProfilePage@1d1f7216</td></tr>
+<tr>
+<td title='agentLogin.Widgets.tc04_contactUs()'><b>tc04_contactUs</b><br>Test class: agentLogin.Widgets</td>
+<td></td>
+<td>9</td>
+<td>agentLogin.Widgets@68759011</td></tr>
+<tr>
+<td title='accountManager.Hierarchy.tc04_hierarchyTierLandingPage()'><b>tc04_hierarchyTierLandingPage</b><br>Test class: accountManager.Hierarchy</td>
+<td></td>
+<td>11</td>
+<td>accountManager.Hierarchy@3faf2e7d</td></tr>
+<tr>
+<td title='accountManager.Listings.tc04_listingsUserDataIssue()'><b>tc04_listingsUserDataIssue</b><br>Test class: accountManager.Listings</td>
+<td></td>
+<td>6</td>
+<td>accountManager.Listings@61526469</td></tr>
+<tr>
+<td title='accountManager.AccountHomePage.tc04_navigateToDashboardFromHomePage()'><b>tc04_navigateToDashboardFromHomePage</b><br>Test class: accountManager.AccountHomePage</td>
+<td></td>
+<td>3</td>
+<td>accountManager.AccountHomePage@29ef6856</td></tr>
+<tr>
+<td title='agentLogin.Connections.tc04_twitterConnectionDrawerValidation()'><b>tc04_twitterConnectionDrawerValidation</b><br>Test class: agentLogin.Connections</td>
+<td></td>
+<td>5</td>
+<td>agentLogin.Connections@305f031</td></tr>
+<tr>
+<td title='agentLogin.Dart.tc04_verifyProfilePageReviewsShareSocialSites()'><b>tc04_verifyProfilePageReviewsShareSocialSites</b><br>Test class: agentLogin.Dart</td>
+<td></td>
+<td>34</td>
+<td>agentLogin.Dart@d5ae57e</td></tr>
+<tr>
+<td title='accountManager.Swiss.tc04_verifySearchResultsPage()'><b>tc04_verifySearchResultsPage</b><br>Test class: accountManager.Swiss</td>
+<td></td>
+<td>12</td>
+<td>accountManager.Swiss@7c351808</td></tr>
+<tr>
+<td title='agentLogin.ReviewsManagement.tc04_verifyShareReview()'><b>tc04_verifyShareReview</b><br>Test class: agentLogin.ReviewsManagement</td>
+<td></td>
+<td>0</td>
+<td>agentLogin.ReviewsManagement@410ae9a3</td></tr>
+<tr>
+<td title='accountManager.Campaign.tc04_verifyViewAnalytics()'><b>tc04_verifyViewAnalytics</b><br>Test class: accountManager.Campaign</td>
+<td></td>
+<td>6</td>
+<td>accountManager.Campaign@4648ce9</td></tr>
+<tr>
+<td title='agentLogin.Campaign.tc04_verifyViewAnalytics()'><b>tc04_verifyViewAnalytics</b><br>Test class: agentLogin.Campaign</td>
+<td></td>
+<td>3</td>
+<td>agentLogin.Campaign@7e242b4d</td></tr>
+<tr>
+<td title='agentLogin.ReviewsManagement.tc05_activityFeedPage()'><b>tc05_activityFeedPage</b><br>Test class: agentLogin.ReviewsManagement</td>
+<td></td>
+<td>8</td>
+<td>agentLogin.ReviewsManagement@410ae9a3</td></tr>
+<tr>
+<td title='accountManager.UserProfilePage.tc05_clickEditProfileIcon()'><b>tc05_clickEditProfileIcon</b><br>Test class: accountManager.UserProfilePage</td>
+<td></td>
+<td>4</td>
+<td>accountManager.UserProfilePage@32f0fba8</td></tr>
+<tr>
+<td title='accountManager.TierprofilePage.tc05_clickEditProfileIcon()'><b>tc05_clickEditProfileIcon</b><br>Test class: accountManager.TierprofilePage</td>
+<td></td>
+<td>4</td>
+<td>accountManager.TierprofilePage@180e6ac4</td></tr>
+<tr>
+<td title='agentLogin.ProfilePage.tc05_clickEditProfileIcon()'><b>tc05_clickEditProfileIcon</b><br>Test class: agentLogin.ProfilePage</td>
+<td></td>
+<td>4</td>
+<td>agentLogin.ProfilePage@1d1f7216</td></tr>
+<tr>
+<td title='accountManager.Hierarchy.tc05_hierarchyTierDrawerLandingPage()'><b>tc05_hierarchyTierDrawerLandingPage</b><br>Test class: accountManager.Hierarchy</td>
+<td></td>
+<td>29</td>
+<td>accountManager.Hierarchy@3faf2e7d</td></tr>
+<tr>
+<td title='agentLogin.Connections.tc05_linkedinConnectionDrawerValidation()'><b>tc05_linkedinConnectionDrawerValidation</b><br>Test class: agentLogin.Connections</td>
+<td></td>
+<td>7</td>
+<td>agentLogin.Connections@305f031</td></tr>
+<tr>
+<td title='agentLogin.Dart.tc05_reportsLandingPage()'><b>tc05_reportsLandingPage</b><br>Test class: agentLogin.Dart</td>
+<td></td>
+<td>30</td>
+<td>agentLogin.Dart@d5ae57e</td></tr>
+<tr>
+<td title='accountManager.Listings.tc05_verifyListingsLocationsLandingPage()'><b>tc05_verifyListingsLocationsLandingPage</b><br>Test class: accountManager.Listings</td>
+<td></td>
+<td>29</td>
+<td>accountManager.Listings@61526469</td></tr>
+<tr>
+<td title='accountManager.Campaign.tc05_verifyOverview()'><b>tc05_verifyOverview</b><br>Test class: accountManager.Campaign</td>
+<td></td>
+<td>4</td>
+<td>accountManager.Campaign@4648ce9</td></tr>
+<tr>
+<td title='agentLogin.Campaign.tc05_verifyOverview()'><b>tc05_verifyOverview</b><br>Test class: agentLogin.Campaign</td>
+<td></td>
+<td>3</td>
+<td>agentLogin.Campaign@7e242b4d</td></tr>
+<tr>
+<td title='accountManager.Hierarchy.tc06_hierarchyTierBulkOptionsLandingPage()'><b>tc06_hierarchyTierBulkOptionsLandingPage</b><br>Test class: accountManager.Hierarchy</td>
+<td></td>
+<td>26</td>
+<td>accountManager.Hierarchy@3faf2e7d</td></tr>
+<tr>
+<td title='agentLogin.Dart.tc06_verifyAgentPageFooter()'><b>tc06_verifyAgentPageFooter</b><br>Test class: agentLogin.Dart</td>
+<td></td>
+<td>12</td>
+<td>agentLogin.Dart@d5ae57e</td></tr>
+<tr>
+<td title='accountManager.UserProfilePage.tc06_verifyFlagReview()'><b>tc06_verifyFlagReview</b><br>Test class: accountManager.UserProfilePage</td>
+<td></td>
+<td>1</td>
+<td>accountManager.UserProfilePage@32f0fba8</td></tr>
+<tr>
+<td title='accountManager.TierprofilePage.tc06_verifyFlagReview()'><b>tc06_verifyFlagReview</b><br>Test class: accountManager.TierprofilePage</td>
+<td></td>
+<td>1</td>
+<td>accountManager.TierprofilePage@180e6ac4</td></tr>
+<tr>
+<td title='agentLogin.ProfilePage.tc06_verifyFlagReview()'><b>tc06_verifyFlagReview</b><br>Test class: agentLogin.ProfilePage</td>
+<td></td>
+<td>1</td>
+<td>agentLogin.ProfilePage@1d1f7216</td></tr>
+<tr>
+<td title='accountManager.Listings.tc06_verifyListingsUserLandingPage()'><b>tc06_verifyListingsUserLandingPage</b><br>Test class: accountManager.Listings</td>
+<td></td>
+<td>28</td>
+<td>accountManager.Listings@61526469</td></tr>
+<tr>
+<td title='accountManager.Campaign.tc06_verifyQuestionSummary()'><b>tc06_verifyQuestionSummary</b><br>Test class: accountManager.Campaign</td>
+<td></td>
+<td>8</td>
+<td>accountManager.Campaign@4648ce9</td></tr>
+<tr>
+<td title='agentLogin.Campaign.tc06_verifyQuestionSummary()'><b>tc06_verifyQuestionSummary</b><br>Test class: agentLogin.Campaign</td>
+<td></td>
+<td>7</td>
+<td>agentLogin.Campaign@7e242b4d</td></tr>
+<tr>
+<td title='agentLogin.Connections.tc06_zillowConnectionDrawerValidation()'><b>tc06_zillowConnectionDrawerValidation</b><br>Test class: agentLogin.Connections</td>
+<td></td>
+<td>6</td>
+<td>agentLogin.Connections@305f031</td></tr>
+<tr>
+<td title='agentLogin.Connections.tc07_InstagramConnectionDrawerValidation()'><b>tc07_InstagramConnectionDrawerValidation</b><br>Test class: agentLogin.Connections</td>
+<td></td>
+<td>4</td>
+<td>agentLogin.Connections@305f031</td></tr>
+<tr>
+<td title='accountManager.Listings.tc07_listingsPublishStatus()'><b>tc07_listingsPublishStatus</b><br>Test class: accountManager.Listings</td>
+<td></td>
+<td>17</td>
+<td>accountManager.Listings@61526469</td></tr>
+<tr>
+<td title='accountManager.Campaign.tc07_verifyReviews()'><b>tc07_verifyReviews</b><br>Test class: accountManager.Campaign</td>
+<td></td>
+<td>6</td>
+<td>accountManager.Campaign@4648ce9</td></tr>
+<tr>
+<td title='agentLogin.Campaign.tc07_verifyReviews()'><b>tc07_verifyReviews</b><br>Test class: agentLogin.Campaign</td>
+<td></td>
+<td>5</td>
+<td>agentLogin.Campaign@7e242b4d</td></tr>
+<tr>
+<td title='accountManager.UserProfilePage.tc07_verifyShareReview()'><b>tc07_verifyShareReview</b><br>Test class: accountManager.UserProfilePage</td>
+<td></td>
+<td>1</td>
+<td>accountManager.UserProfilePage@32f0fba8</td></tr>
+<tr>
+<td title='accountManager.TierprofilePage.tc07_verifyShareReview()'><b>tc07_verifyShareReview</b><br>Test class: accountManager.TierprofilePage</td>
+<td></td>
+<td>0</td>
+<td>accountManager.TierprofilePage@180e6ac4</td></tr>
+<tr>
+<td title='agentLogin.ProfilePage.tc07_verifyShareReview()'><b>tc07_verifyShareReview</b><br>Test class: agentLogin.ProfilePage</td>
+<td></td>
+<td>0</td>
+<td>agentLogin.ProfilePage@1d1f7216</td></tr>
+<tr>
+<td title='agentLogin.Connections.tc08_lendiingTreeConnectionDrawerValidation()'><b>tc08_lendiingTreeConnectionDrawerValidation</b><br>Test class: agentLogin.Connections</td>
+<td></td>
+<td>5</td>
+<td>agentLogin.Connections@305f031</td></tr>
+<tr>
+<td title='accountManager.Campaign.tc08_verifyLeaderboard()'><b>tc08_verifyLeaderboard</b><br>Test class: accountManager.Campaign</td>
+<td></td>
+<td>8</td>
+<td>accountManager.Campaign@4648ce9</td></tr>
+<tr>
+<td title='agentLogin.Campaign.tc08_verifyLeaderboard()'><b>tc08_verifyLeaderboard</b><br>Test class: agentLogin.Campaign</td>
+<td></td>
+<td>7</td>
+<td>agentLogin.Campaign@7e242b4d</td></tr>
+<tr>
+<td title='accountManager.UserProfilePage.tc08_verifyRatingTab()'><b>tc08_verifyRatingTab</b><br>Test class: accountManager.UserProfilePage</td>
+<td></td>
+<td>0</td>
+<td>accountManager.UserProfilePage@32f0fba8</td></tr>
+<tr>
+<td title='accountManager.TierprofilePage.tc08_verifyRatingTab()'><b>tc08_verifyRatingTab</b><br>Test class: accountManager.TierprofilePage</td>
+<td></td>
+<td>0</td>
+<td>accountManager.TierprofilePage@180e6ac4</td></tr>
+<tr>
+<td title='agentLogin.Connections.tc09_realtorTreeConnectionDrawerValidation()'><b>tc09_realtorTreeConnectionDrawerValidation</b><br>Test class: agentLogin.Connections</td>
+<td></td>
+<td>5</td>
+<td>agentLogin.Connections@305f031</td></tr>
+<tr>
+<td title='accountManager.UserProfilePage.tc09_verifyAboutSection()'><b>tc09_verifyAboutSection</b><br>Test class: accountManager.UserProfilePage</td>
+<td></td>
+<td>1</td>
+<td>accountManager.UserProfilePage@32f0fba8</td></tr>
+<tr>
+<td title='accountManager.TierprofilePage.tc09_verifyAboutSection()'><b>tc09_verifyAboutSection</b><br>Test class: accountManager.TierprofilePage</td>
+<td></td>
+<td>1</td>
+<td>accountManager.TierprofilePage@180e6ac4</td></tr>
+<tr>
+<td title='agentLogin.ProfilePage.tc09_verifyAboutSection()'><b>tc09_verifyAboutSection</b><br>Test class: agentLogin.ProfilePage</td>
+<td></td>
+<td>1</td>
+<td>agentLogin.ProfilePage@1d1f7216</td></tr>
+<tr>
+<td title='accountManager.Campaign.tc09_verifyIncompleteSurveys()'><b>tc09_verifyIncompleteSurveys</b><br>Test class: accountManager.Campaign</td>
+<td></td>
+<td>7</td>
+<td>accountManager.Campaign@4648ce9</td></tr>
+<tr>
+<td title='agentLogin.Campaign.tc09_verifyIncompleteSurveys()'><b>tc09_verifyIncompleteSurveys</b><br>Test class: agentLogin.Campaign</td>
+<td></td>
+<td>7</td>
+<td>agentLogin.Campaign@7e242b4d</td></tr>
+<tr>
+<td title='accountManager.UserProfilePage.tc10_verifyContactSection()'><b>tc10_verifyContactSection</b><br>Test class: accountManager.UserProfilePage</td>
+<td></td>
+<td>9</td>
+<td>accountManager.UserProfilePage@32f0fba8</td></tr>
+<tr>
+<td title='accountManager.TierprofilePage.tc10_verifyContactSection()'><b>tc10_verifyContactSection</b><br>Test class: accountManager.TierprofilePage</td>
+<td></td>
+<td>8</td>
+<td>accountManager.TierprofilePage@180e6ac4</td></tr>
+<tr>
+<td title='agentLogin.ProfilePage.tc10_verifyUserContactSection()'><b>tc10_verifyUserContactSection</b><br>Test class: agentLogin.ProfilePage</td>
+<td></td>
+<td>8</td>
+<td>agentLogin.ProfilePage@1d1f7216</td></tr>
+<tr>
+<td title='accountManager.Campaign.tc10_verifyVersionHistory()'><b>tc10_verifyVersionHistory</b><br>Test class: accountManager.Campaign</td>
+<td></td>
+<td>8</td>
+<td>accountManager.Campaign@4648ce9</td></tr>
+<tr>
+<td title='agentLogin.Campaign.tc10_verifyVersionHistory()'><b>tc10_verifyVersionHistory</b><br>Test class: agentLogin.Campaign</td>
+<td></td>
+<td>8</td>
+<td>agentLogin.Campaign@7e242b4d</td></tr>
+<tr>
+<td title='accountManager.Campaign.tc11_verifyIncompleteSurveyInSideTab()'><b>tc11_verifyIncompleteSurveyInSideTab</b><br>Test class: accountManager.Campaign</td>
+<td></td>
+<td>15</td>
+<td>accountManager.Campaign@4648ce9</td></tr>
+<tr>
+<td title='agentLogin.Campaign.tc11_verifyIncompleteSurveyInSideTab()'><b>tc11_verifyIncompleteSurveyInSideTab</b><br>Test class: agentLogin.Campaign</td>
+<td></td>
+<td>11</td>
+<td>agentLogin.Campaign@7e242b4d</td></tr>
+<tr>
+<td title='accountManager.TierprofilePage.tc11_verifyUsersSection()'><b>tc11_verifyUsersSection</b><br>Test class: accountManager.TierprofilePage</td>
+<td></td>
+<td>15</td>
+<td>accountManager.TierprofilePage@180e6ac4</td></tr>
+<tr>
+<td title='accountManager.SocialMonitor.tc_01verifyingSocialMonitorLandingPage()'><b>tc_01verifyingSocialMonitorLandingPage</b><br>Test class: accountManager.SocialMonitor</td>
+<td></td>
+<td>5</td>
+<td>accountManager.SocialMonitor@eb6449b</td></tr>
+<tr>
+<td title='accountManager.SocialMonitor.tc_02verifyingMacrosReportsEditMonitors()'><b>tc_02verifyingMacrosReportsEditMonitors</b><br>Test class: accountManager.SocialMonitor</td>
+<td></td>
+<td>15</td>
+<td>accountManager.SocialMonitor@eb6449b</td></tr>
+<tr>
+<td title='accountManager.SocialMonitor.tc_03verifyingFilter()'><b>tc_03verifyingFilter</b><br>Test class: accountManager.SocialMonitor</td>
+<td></td>
+<td>12</td>
+<td>accountManager.SocialMonitor@eb6449b</td></tr>
+<tr>
+<td title='accountManager.SocialMonitor.tc_04verifyingStreams()'><b>tc_04verifyingStreams</b><br>Test class: accountManager.SocialMonitor</td>
+<td></td>
+<td>18</td>
+<td>accountManager.SocialMonitor@eb6449b</td></tr>
+<tr>
+<td title='accountManager.SocialMonitor.tc_05verifyingAlerts()'><b>tc_05verifyingAlerts</b><br>Test class: accountManager.SocialMonitor</td>
+<td></td>
+<td>21</td>
+<td>accountManager.SocialMonitor@eb6449b</td></tr>
+<tr>
+<td title='accountManager.SocialMonitor.tc_06verifyingEscalation()'><b>tc_06verifyingEscalation</b><br>Test class: accountManager.SocialMonitor</td>
+<td></td>
+<td>7</td>
+<td>accountManager.SocialMonitor@eb6449b</td></tr>
+<tr>
+<td title='accountManager.SocialMonitor.tc_07verifyingResolution()'><b>tc_07verifyingResolution</b><br>Test class: accountManager.SocialMonitor</td>
+<td></td>
+<td>2</td>
+<td>accountManager.SocialMonitor@eb6449b</td></tr>
+<tr>
+<td title='accountManager.SocialMonitor.tc_08verifyingTrustedSource()'><b>tc_08verifyingTrustedSource</b><br>Test class: accountManager.SocialMonitor</td>
+<td></td>
+<td>0</td>
+<td>accountManager.SocialMonitor@eb6449b</td></tr>
+<tr>
+<td title='accountManager.SocialMonitor.tc_09verifyingReports()'><b>tc_09verifyingReports</b><br>Test class: accountManager.SocialMonitor</td>
+<td></td>
+<td>0</td>
+<td>accountManager.SocialMonitor@eb6449b</td></tr>
+<tr>
+<td title='accountManager.Transactions.transactionsLandingPage()'><b>transactionsLandingPage</b><br>Test class: accountManager.Transactions</td>
+<td></td>
+<td>9</td>
+<td>accountManager.Transactions@7e985ce9</td></tr>
+<tr>
+<td title='accountManager.TransactionMonitor.verifyLandingPage()'><b>verifyLandingPage</b><br>Test class: accountManager.TransactionMonitor</td>
+<td></td>
+<td>5</td>
+<td>accountManager.TransactionMonitor@42b64ab8</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='agentLogin.ProfilePage.tc01_verifyProfileLandingPage()'><b>tc01_verifyProfileLandingPage</b><br>Test class: agentLogin.ProfilePage</td>
+<td><div><pre>java.lang.AssertionError: Rating is equal to zero expected [true] but found [false]
+	at driversAndLibrary.WebDriverImpl.verifyLandingPageForUserProfilePage(WebDriverImpl.java:934)
+	at agentLogin.ProfilePage.tc01_verifyProfileLandingPage(ProfilePage.java:40)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace385667780", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace385667780'><pre>java.lang.AssertionError: Rating is equal to zero expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at driversAndLibrary.WebDriverImpl.verifyLandingPageForUserProfilePage(WebDriverImpl.java:934)
+	at agentLogin.ProfilePage.tc01_verifyProfileLandingPage(ProfilePage.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>16</td>
+<td>agentLogin.ProfilePage@1d1f7216</td></tr>
+<tr>
+<td title='agentLogin.ReviewsManagement.tc01_verifyReviewsLandingPage()'><b>tc01_verifyReviewsLandingPage</b><br>Test class: agentLogin.ReviewsManagement</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at agentLogin.ReviewsManagement.tc01_verifyReviewsLandingPage(ReviewsManagement.java:43)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1742492142", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1742492142'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at agentLogin.ReviewsManagement.tc01_verifyReviewsLandingPage(ReviewsManagement.java:43)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>agentLogin.ReviewsManagement@410ae9a3</td></tr>
+<tr>
+<td title='accountManager.Campaign.tc03_verifyManualSurveyFields()'><b>tc03_verifyManualSurveyFields</b><br>Test class: accountManager.Campaign</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#undefined_closeButton&quot;}
+  (Session info: MicrosoftEdge=117.0.2045.31)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows Server 2022&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [af48abf135cc4ffc98d28387877e26eb, findElement {using=id, value=undefined_closeButton}]
+Capabilities {acceptInsecureCerts: true, browserName: msedge, browserVersion: 117.0.2045.31, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:61095}, msedge: {msedgedriverVersion: 117.0.2045.43 (fe8879882c1b..., userDataDir: C:\Users\V2-PER~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61095/devtoo..., se:cdpVersion: 117.0.2045.31, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: af48abf135cc4ffc98d28387877e26eb
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at accountManager.Campaign.tc03_verifyManualSurveyFields(Campaign.java:105)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace820204621", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace820204621'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#undefined_closeButton&quot;}
+  (Session info: MicrosoftEdge=117.0.2045.31)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows Server 2022&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [af48abf135cc4ffc98d28387877e26eb, findElement {using=id, value=undefined_closeButton}]
+Capabilities {acceptInsecureCerts: true, browserName: msedge, browserVersion: 117.0.2045.31, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:61095}, msedge: {msedgedriverVersion: 117.0.2045.43 (fe8879882c1b..., userDataDir: C:\Users\V2-PER~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61095/devtoo..., se:cdpVersion: 117.0.2045.31, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: af48abf135cc4ffc98d28387877e26eb
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at accountManager.Campaign.tc03_verifyManualSurveyFields(Campaign.java:105)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>44</td>
+<td>accountManager.Campaign@4648ce9</td></tr>
+<tr>
+<td title='agentLogin.ProfilePage.tc03_verifyProfessionalSidePage()'><b>tc03_verifyProfessionalSidePage</b><br>Test class: agentLogin.ProfilePage</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at driversAndLibrary.WebDriverImpl.verifyProfessionalsTab(WebDriverImpl.java:1006)
+	at agentLogin.ProfilePage.tc03_verifyProfessionalSidePage(ProfilePage.java:52)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1286700252", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1286700252'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at driversAndLibrary.WebDriverImpl.verifyProfessionalsTab(WebDriverImpl.java:1006)
+	at agentLogin.ProfilePage.tc03_verifyProfessionalSidePage(ProfilePage.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>8</td>
+<td>agentLogin.ProfilePage@1d1f7216</td></tr>
+<tr>
+<td title='agentLogin.Campaign.tc08_verifyLeaderboard()'><b>tc08_verifyLeaderboard</b><br>Test class: agentLogin.Campaign</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[EdgeDriver: msedge on windows (bb75d4e39c58629b6a82865b0871da85)] -&gt; xpath: //th[@class=&apos;ant-table-cell&apos;]] (tried for 20 second(s) with 250 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at driversAndLibrary.WebDriverImpl.fluentVisibilityOfElement(WebDriverImpl.java:666)
+	at agentLogin.Campaign.tc08_verifyLeaderboard(Campaign.java:168)
+Caused by: org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=117.0.2045.31)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows Server 2022&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [bb75d4e39c58629b6a82865b0871da85, isElementDisplayed {id=8BB9E543D498A680B176CBDCF4145323_element_253}]
+Capabilities {acceptInsecureCerts: true, browserName: msedge, browserVersion: 117.0.2045.31, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:63031}, msedge: {msedgedriverVersion: 117.0.2045.43 (fe8879882c1b..., userDataDir: C:\Users\V2-PER~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63031/devtoo..., se:cdpVersion: 117.0.2045.31, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: msedge on windows (bb75d4e39c58629b6a82865b0871da85)] -&gt; xpath: //th[@class=&apos;ant-table-cell&apos;]]
+Session ID: bb75d4e39c58629b6a82865b0871da85
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:280)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 27 more
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace637800330", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace637800330'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[EdgeDriver: msedge on windows (bb75d4e39c58629b6a82865b0871da85)] -&gt; xpath: //th[@class=&apos;ant-table-cell&apos;]] (tried for 20 second(s) with 250 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at driversAndLibrary.WebDriverImpl.fluentVisibilityOfElement(WebDriverImpl.java:666)
+	at agentLogin.Campaign.tc08_verifyLeaderboard(Campaign.java:168)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=117.0.2045.31)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows Server 2022&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [bb75d4e39c58629b6a82865b0871da85, isElementDisplayed {id=8BB9E543D498A680B176CBDCF4145323_element_253}]
+Capabilities {acceptInsecureCerts: true, browserName: msedge, browserVersion: 117.0.2045.31, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:63031}, msedge: {msedgedriverVersion: 117.0.2045.43 (fe8879882c1b..., userDataDir: C:\Users\V2-PER~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63031/devtoo..., se:cdpVersion: 117.0.2045.31, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: msedge on windows (bb75d4e39c58629b6a82865b0871da85)] -&gt; xpath: //th[@class=&apos;ant-table-cell&apos;]]
+Session ID: bb75d4e39c58629b6a82865b0871da85
+	at jdk.internal.reflect.GeneratedConstructorAccessor45.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:280)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 27 more
+</pre></div></td>
+<td>22</td>
+<td>agentLogin.Campaign@7e242b4d</td></tr>
+<tr>
+<td title='agentLogin.ProfilePage.tc08_verifyRatingTab()'><b>tc08_verifyRatingTab</b><br>Test class: agentLogin.ProfilePage</td>
+<td><div><pre>java.lang.AssertionError: Review Count is less than zero expected [true] but found [false]
+	at driversAndLibrary.WebDriverImpl.verifyRatingTab(WebDriverImpl.java:1107)
+	at agentLogin.ProfilePage.tc08_verifyRatingTab(ProfilePage.java:80)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace832380300", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace832380300'><pre>java.lang.AssertionError: Review Count is less than zero expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at driversAndLibrary.WebDriverImpl.verifyRatingTab(WebDriverImpl.java:1107)
+	at agentLogin.ProfilePage.tc08_verifyRatingTab(ProfilePage.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>agentLogin.ProfilePage@1d1f7216</td></tr>
+<tr>
+<td title='accountManager.Campaign.tc11_verifyIncompleteSurveyInSideTab()'><b>tc11_verifyIncompleteSurveyInSideTab</b><br>Test class: accountManager.Campaign</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: [object HTMLLIElement] has no size and location
+  (Session info: MicrosoftEdge=117.0.2045.31)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows Server 2022&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [af48abf135cc4ffc98d28387877e26eb, actions {actions=[org.openqa.selenium.interactions.Sequence@6319ea75]}]
+Capabilities {acceptInsecureCerts: true, browserName: msedge, browserVersion: 117.0.2045.31, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:61095}, msedge: {msedgedriverVersion: 117.0.2045.43 (fe8879882c1b..., userDataDir: C:\Users\V2-PER~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61095/devtoo..., se:cdpVersion: 117.0.2045.31, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: af48abf135cc4ffc98d28387877e26eb
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:604)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:605)
+	at driversAndLibrary.WebDriverImpl.moveToElement(WebDriverImpl.java:414)
+	at accountManager.Campaign.tc11_verifyIncompleteSurveyInSideTab(Campaign.java:234)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace854632898", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace854632898'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: [object HTMLLIElement] has no size and location
+  (Session info: MicrosoftEdge=117.0.2045.31)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows Server 2022&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [af48abf135cc4ffc98d28387877e26eb, actions {actions=[org.openqa.selenium.interactions.Sequence@6319ea75]}]
+Capabilities {acceptInsecureCerts: true, browserName: msedge, browserVersion: 117.0.2045.31, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:61095}, msedge: {msedgedriverVersion: 117.0.2045.43 (fe8879882c1b..., userDataDir: C:\Users\V2-PER~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61095/devtoo..., se:cdpVersion: 117.0.2045.31, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: af48abf135cc4ffc98d28387877e26eb
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:604)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:605)
+	at driversAndLibrary.WebDriverImpl.moveToElement(WebDriverImpl.java:414)
+	at accountManager.Campaign.tc11_verifyIncompleteSurveyInSideTab(Campaign.java:234)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>8</td>
+<td>accountManager.Campaign@4648ce9</td></tr>
+</table><p>
+</body>
+</html>

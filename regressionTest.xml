@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="PageVaildation">
+	<listeners
+	><listener class-name="Analyzer.MyTransformer"/>
+	</listeners>
+  <test thread-count="5" name="Test">
+    	
+        <classes>
+        	
+        	<class name="accountManager.UserProfilePage"/>
+       		<class name="accountManager.AccountDashBoard"/>
+			<class name="accountManager.AccountHomePage"/>
+			<class name="accountManager.AdvancedAnalytics"/>
+			<class name="accountManager.Hierarchy"/>
+			<class name="accountManager.Campaign"/>
+			<class name="accountManager.IngestionSetup"/>
+			<class name="accountManager.Listings"/>
+			<class name="accountManager.ReviewsManagement"/>
+			<class name="accountManager.Settings"/>
+			<class name="accountManager.SocialMonitor"/>
+			<class name="accountManager.Swiss"/>
+			<class name="accountManager.TierprofilePage"/>
+			<class name="accountManager.TransactionMonitor"/>
+			<class name="accountManager.Transactions"/>
+			<class name="accountManager.Widgets"/>
+
+			<class name="agentLogin.ReviewsManagement"/>
+			<class name="agentLogin.Settings"/>
+			<class name="agentLogin.Dart"/>
+			<class name="agentLogin.Widgets"/>
+			<class name="agentLogin.Campaign"/>
+			<class name="agentLogin.Connections"/>
+			<class name="agentLogin.Listings"/>
+      		 <class name="agentLogin.ProfilePage"/>
+
+		    	
+                    
+  </classes>
+
+    </test>
+
+</suite>
+
+
+           

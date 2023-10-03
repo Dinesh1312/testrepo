@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="10" total="11" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-09-27T08:53:59Z" name="Default suite" finished-at="2023-09-27T08:54:29Z" duration-ms="29786">
+    <groups>
+    </groups>
+    <test started-at="2023-09-27T08:53:59Z" name="Default test" finished-at="2023-09-27T08:54:29Z" duration-ms="29786">
+      <class name="accountManager.Campaign">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:accountManager.Campaign@350ec41e]" started-at="2023-09-27T08:53:59Z" name="beforeClass" finished-at="2023-09-27T08:54:19Z" duration-ms="19941" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:accountManager.Campaign@350ec41e]" started-at="2023-09-27T08:54:19Z" name="beforeMethod" finished-at="2023-09-27T08:54:19Z" duration-ms="272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="tc03_verifyManualSurveyFields()[pri:0, instance:accountManager.Campaign@350ec41e]" started-at="2023-09-27T08:54:19Z" name="tc03_verifyManualSurveyFields" finished-at="2023-09-27T08:54:28Z" duration-ms="9386" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc03_verifyManualSurveyFields -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:accountManager.Campaign@350ec41e]" started-at="2023-09-27T08:54:28Z" name="afterClass" finished-at="2023-09-27T08:54:29Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- accountManager.Campaign -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

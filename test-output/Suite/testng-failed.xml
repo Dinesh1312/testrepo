@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="agentLogin.Dart">
+        <methods>
+          <include name="afterClass"/>
+          <include name="tc05_verifyAgentReportLandingPage"/>
+          <include name="tc03_verifyProfilePageShareSocialSites"/>
+          <include name="browser"/>
+          <include name="tc04_verifyProfilePageReviewsShareSocialSites"/>
+        </methods>
+      </class> <!-- agentLogin.Dart -->
+      <class name="agentLogin.Connections">
+        <methods>
+          <include name="tc09_realtorTreeConnectionDrawerValidation"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="tc05_linkedinConnectionDrawerValidation"/>
+          <include name="tc01_landingConnectionPage"/>
+        </methods>
+      </class> <!-- agentLogin.Connections -->
+      <class name="agentLogin.Listings">
+        <methods>
+          <include name="afterClass"/>
+          <include name="tc01_verifyListingsLandingPage"/>
+          <include name="tc02_clickFilter"/>
+          <include name="browser"/>
+        </methods>
+      </class> <!-- agentLogin.Listings -->
+      <class name="agentLogin.Settings">
+        <methods>
+          <include name="afterClass"/>
+          <include name="tc01_verifySettings"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- agentLogin.Settings -->
+      <class name="agentLogin.Widgets">
+        <methods>
+          <include name="afterClass"/>
+          <include name="tc01_widgets"/>
+          <include name="browser"/>
+        </methods>
+      </class> <!-- agentLogin.Widgets -->
+      <class name="agentLogin.Campaign">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="tc04_verifyViewAnalytics"/>
+          <include name="tc08_verifyLeaderboard"/>
+          <include name="tc02_verifyActivityFeedDrawer"/>
+          <include name="tc07_verifyReviews"/>
+          <include name="afterClass"/>
+          <include name="tc06_verifyQuestionSummary"/>
+          <include name="tc03_verifyManualSurveyFields"/>
+          <include name="tc01_verifyAgentLandingPage"/>
+          <include name="tc11_verifyIncompleteSurveyInSideTab"/>
+          <include name="tc05_verifyOverview"/>
+          <include name="tc09_verifyIncompleteSurveys"/>
+          <include name="tc10_verifyVersionHistory"/>
+        </methods>
+      </class> <!-- agentLogin.Campaign -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

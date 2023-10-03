@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [PageVaildation]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Analyzer.MyTransformer"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="agentLogin.ProfilePage">
+        <methods>
+          <include name="tc01_verifyProfileLandingPage"/>
+          <include name="afterClass"/>
+          <include name="tc08_verifyRatingTab"/>
+          <include name="browser"/>
+          <include name="tc03_verifyProfessionalSidePage"/>
+        </methods>
+      </class> <!-- agentLogin.ProfilePage -->
+      <class name="accountManager.Campaign">
+        <methods>
+          <include name="tc03_verifyManualSurveyFields"/>
+          <include name="beforeMethod"/>
+          <include name="afterClass"/>
+          <include name="tc11_verifyIncompleteSurveyInSideTab"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- accountManager.Campaign -->
+      <class name="agentLogin.Campaign">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="tc08_verifyLeaderboard"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- agentLogin.Campaign -->
+      <class name="agentLogin.ReviewsManagement">
+        <methods>
+          <include name="afterClass"/>
+          <include name="tc01_verifyReviewsLandingPage"/>
+          <include name="browser"/>
+        </methods>
+      </class> <!-- agentLogin.ReviewsManagement -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [PageVaildation] -->
