@@ -22,10 +22,10 @@ jobs:
       uses: actions/checkout@v2
 
     # Set up JDK 11 (or the JDK version your project requires)
-    - name: Set up JDK 11
+    - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
-        java-version: '11'
+        java-version: '17'
 
     # Cache Maven dependencies to improve build speed
     - name: Cache Maven packages
